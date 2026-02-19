@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Hello, EJS</h1>
+  <h2>Hi there, <%= user.name %>!</h2>
+  <h3>Would you like a <%= user.color %> <%= user.food %>? </h3>
+  <h4>Your grade <%= user.grade %></h4>
+
+  <% if (user.grade > 2.0) { %>
+    <P>You're Passing!</P>
+  <% } else { %>
+    <p>You need to study harder</p>
+  <% } %>
+
+  <h4>Hobbies</h4>
+  <ul>
+  <% user.hobbies.forEach(hobby => { %> 
+    <li><%= hobby %></li>
+  <% }) %>
+  </ul>
+
+  <h4>Games</h4>
+  <ol>
+  <% user.games.forEach(game => { %> 
+    <li><%= game %></li>
+  <% }) %>
+  </ol>
+  
+</body>
+</html>
